@@ -1,0 +1,5 @@
+{
+  "name": "hive",
+  "version": "0.1.0",
+  "description": "Hive multi-agent fleet: coordination tools, hooks and skills (loaded per session by `hive`)."
+}

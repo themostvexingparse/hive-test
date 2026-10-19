@@ -1,0 +1,23 @@
+# Hive configuration (committed). See SPEC.md §16.
+[server]
+url = "http://127.0.0.1:8765"
+
+[repo]
+main = "main"
+# github = "owner/repo"   # enables server-side fast-forward of main via the GitHub API
+
+[integration]
+review = "off"            # off | orchestrator | reviewer
+checks = []               # e.g. ["python -m pytest -q"]; run before integrating into main
+
+[orchestrator]
+standby = []              # agents that take over if the orchestrator is unavailable
+debounce_seconds = 90     # routine events are batched this long before waking the orchestrator
+heartbeat_hours = 4
+
+# Override built-in roles or add custom ones:
+# [roles.docs-writer]
+# can_code = true
+# task_kinds = ["docs"]
+# tools = ["lease_acquire", "lease_extend", "lease_release"]
+# prompt = "You write user documentation."

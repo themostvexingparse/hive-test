@@ -1,0 +1,15 @@
+{
+  "name": "hive",
+  "version": "0.1.0",
+  "description": "Hive multi-agent fleet (loaded per session by `hive`).",
+  "mcpServers": {
+    "hive": {
+      "command": "hive",
+      "args": [
+        "mcp"
+      ],
+      "timeout": 1800000
+    }
+  },
+  "contextFileName": "HIVE.md"
+}
