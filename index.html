@@ -2,7 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello World</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg-from: #e0f2fe;
+      --bg-to: #fce7f3;
+      --text: #1e293b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-from: #0f172a;
+        --bg-to: #312e81;
+        --text: #f1f5f9;
+      }
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    h1 {
+      margin: 0 1rem;
+      font-size: clamp(2.5rem, 10vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello, World!</h1>
